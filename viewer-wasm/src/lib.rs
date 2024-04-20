@@ -20,18 +20,13 @@ struct CustomTensorView {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct SafeTensorInfo {
-    names: Vec<String>,
     tensors: Vec<(String, CustomTensorView)>
 }
 
 fn deserialize_rs(data: &[u8]) -> Result<SafeTensorInfo, SafeTensorError> {
     let tensors_data = SafeTensors::deserialize(&data)?;
-    let names = tensors_data.names();
     let tensors = tensors_data.tensors();
-    // self.read_safetensors("", &tensors
-    
     Ok(SafeTensorInfo {
-        names: names.iter().map(|x| x.to_string()).collect(),
         tensors: tensors.iter().map(|(name, tensor)| {
             let dtype = tensor.dtype();
             let shape = tensor.shape();

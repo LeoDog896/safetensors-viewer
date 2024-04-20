@@ -65,6 +65,9 @@ devDependencies:
   vite-plugin-wasm-pack:
     specifier: ^0.1.12
     version: 0.1.12
+  zod:
+    specifier: ^3.22.5
+    version: 3.22.5
 
 packages:
 
@@ -2333,4 +2336,8 @@ packages:
   /yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+    dev: true
+
+  /zod@3.22.5:
+    resolution: {integrity: sha512-HqnGsCdVZ2xc0qWPLdO25WnseXThh0kEYKIdV5F/hTHO75hNZFp8thxSeHhiPrHZKrFTo1SOgkAj9po5bexZlw==}
     dev: true
